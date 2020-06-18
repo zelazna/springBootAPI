@@ -1,0 +1,98 @@
+# curl http://localhost:8889/api/quizzes/
+GET http://localhost:8889/api/quizzes
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+###
+
+# curl http://localhost:8889/api/quizzes/
+GET http://localhost:8889/api/quizzes?page=0
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+###
+
+# curl http://localhost:8889/api/quizzes/1
+GET http://localhost:8889/api/quizzes/0
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+###
+
+# curl -X POST -d '{"answer": [1]}'  -H "Content-Type: application/json"  http://localhost:8889/api/quizzes/0/solve
+POST http://localhost:8889/api/quizzes/2/solve
+Content-Type: application/json
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+{
+  "answer": [
+    1
+  ]
+}
+
+###
+
+# curl -X POST -d '{"title": "The Java Logo", "text": "ll","options": ["LOL","LUL"], "answer": [1,2]}' -H "Content-Type: application/json"  http://localhost:8889/api/quizzes
+POST http://localhost:8889/api/quizzes
+Content-Type: application/json
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+{
+  "title": "The Java Logo",
+  "text": "ll",
+  "options": [
+    "LOL",
+    "LUL"
+  ],
+  "answer": [
+    1
+  ]
+}
+
+###
+
+POST http://localhost:8889/api/register
+Content-Type: application/json
+
+{
+  "email": "constantin.guidon@gmail.com",
+  "password": "azertyuiop"
+}
+
+###
+
+POST http://localhost:8889/api/register
+Content-Type: application/json
+
+{
+  "email": "lol.lul@gmail.com",
+  "password": "azertyuiop"
+}
+
+###
+
+DELETE http://localhost:8889/api/quizzes/2
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+###
+
+POST http://localhost:8889/api/register
+Content-Type: application/json
+
+{
+  "email": "well@googlecom",
+  "password": "rtyfgcxsfd"
+}
+
+###
+
+# curl http://localhost:8889/api/quizzes/
+GET http://localhost:8889/api/quizzes/completed?page=0
+Authorization: Basic constantin.guidon@gmail.com azertyuiop
+
+###
+
+###
+
+# curl http://localhost:8889/api/quizzes/
+GET http://localhost:8889/api/quizzes/completed?page=0
+Authorization: Basic lol.lul@gmail.com azertyuiop
+
+###
